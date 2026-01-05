@@ -331,4 +331,50 @@ footer p:nth-child(2){
     margin-bottom: 0.3rem;
 }
 
+/*==== Responsive ====*/
+@media (max-width: 1024px){
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .kernkwaliteit-container {
+        justify-content: center;
+    }
+
+    .x-factor-container {
+        justify-content: center;
+    }
+
+    nav {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px){
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leerdoelen {
+        width: 95%;
+    }
+
+    .AIM-Reflectie,
+    .kernkwaliteit,
+    .x-factor-box {
+        width: 100%;
+    }
+
+    #extra-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
 
