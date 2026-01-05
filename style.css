@@ -9,6 +9,8 @@ body{
     background-color: #D4CDC3;
     color: white;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -186,21 +188,7 @@ section{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.projectImages{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
 
-.projectImages img{
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-}
 .project:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -217,7 +205,6 @@ section{
     margin-bottom: 0.5rem;
     color: black;
 }
-
 .project img,
 .project video{
     height: 500px;
@@ -240,6 +227,52 @@ section{
     background-color: #000000;
     transform: scale(1.1);
 }
+
+/* SLIDER */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-list {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.image-item {
+    min-width: 100%;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 30px;
+
+}
+
+/* Knoppen */
+/* SLIDER KNOPPEN – betere klikbaarheid */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: #A66E29;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 
 /*skills*/
 #skills{
@@ -347,9 +380,8 @@ button{
     padding: 3rem 1rem;
     background: linear-gradient(135deg, #D4CDC3 0%, #ADD9D9 100%);
     color: black;
-    margin-left:20px;
-    margin-right:20px;
-    margin-top:0;
+    margin: 0;
+    border-radius: 0;
 }
 
 #contact h2{
@@ -644,4 +676,101 @@ body.dark-mode footer p:nth-child(4) {
 #typewriter.done {
     border-right: none;
     animation: none;
+}
+
+/*responsive mobile*/
+@media (max-width: 768px) {
+
+    /* Header */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    /* Navigatie onder elkaar */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Titels */
+    h2 {
+        font-size: 2.5rem !important;
+    }
+
+    /* Over mij */
+    #overMij .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #overMij img {
+        width: 200px;
+    }
+
+    /* Projecten */
+    .project img,
+    .project video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Slider */
+    .slider {
+        max-width: 100%;
+    }
+
+    .image-item {
+        height: 300px;
+    }
+
+    /* Slider knoppen */
+    .prev,
+    .next {
+        padding: 10px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    /* Skills */
+    #skills {
+        margin: 10px;
+    }
+
+    /* Contact */
+    .contact-box {
+        width: 100%;
+    }
+
+    .prev,
+    .next{
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/*responsive tablet*/
+
+@media (max-width: 1024px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .image-item {
+        height: 380px;
+    }
+
+    .project img,
+    .project video {
+        width: 100%;
+        height: auto;
+    }
 }

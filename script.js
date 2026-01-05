@@ -43,3 +43,34 @@ function typeWriter() {
 
 title.textContent = ""; // start leeg
 typeWriter();
+
+
+
+//slider
+document.addEventListener("DOMContentLoaded", () => {
+    const imageList = document.querySelector(".image-list");
+    const images = document.querySelectorAll(".image-item");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
+
+    if (!imageList || !nextBtn || !prevBtn) {
+        console.error("Slider elements not found");
+        return;
+    }
+
+    let index = 0;
+
+    function updateSlider() {
+        imageList.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        updateSlider();
+    });
+});
