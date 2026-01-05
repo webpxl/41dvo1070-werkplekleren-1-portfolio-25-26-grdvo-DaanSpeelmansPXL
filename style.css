@@ -687,6 +687,7 @@ body.dark-mode footer p:nth-child(4) {
     }
     header h1 {
         font-size: 1.6rem;
+        align-content: center;
     }
 
     header p {
