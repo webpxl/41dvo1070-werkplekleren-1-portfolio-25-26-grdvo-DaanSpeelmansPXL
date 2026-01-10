@@ -121,10 +121,14 @@ section{
 }
 
 #overMij p{
+    background-color: rgba(166 110 41 / 45%);
+    padding: 0.8rem;
     margin-bottom: 1rem;
     color: black;
     line-height: 1.7;
     text-align: justify;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 #overMij button{
@@ -199,18 +203,39 @@ section{
     margin-bottom: 0.5rem;
     color: #000000;
     font-weight: bold;
+    text-decoration: underline;
+}
+
+.project h4{
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    color: #000000;
+    font-weight: bold;
 }
 
 .project p{
     margin-bottom: 0.5rem;
     color: black;
+    width: 600px;
 }
-.project img,
-.project video{
+.project img{
     height: 500px;
     margin-top: 1rem;
     border-radius: 15px;
 }
+
+.project video{
+    height: 500px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    transition: ease-in 0.2s;
+}
+
+.project video:hover{
+    transform: scale(1.05);
+}
+
 
 .project button{
     background-color: #A66E29;
@@ -679,6 +704,7 @@ body.dark-mode footer p:nth-child(4) {
 }
 
 /*responsive mobile*/
+/* Mobile */
 @media (max-width: 768px) {
 
     /* Header */
@@ -686,52 +712,50 @@ body.dark-mode footer p:nth-child(4) {
         padding: 2rem 1rem;
     }
     header h1 {
-        font-size: 1.6rem;
+        font-size:1.6rem;
         align-content: center;
     }
-
     header p {
-        font-size: 0.9rem;
+        font-size:0.9rem;
     }
 
-    /* Navigatie onder elkaar */
     nav {
         flex-direction: column;
         gap: 10px;
+        padding: 1rem;
     }
 
-    /* Titels */
     h2 {
         font-size: 2.5rem !important;
     }
 
-    /* Over mij */
     #overMij .about-container {
         flex-direction: column;
         text-align: center;
     }
 
     #overMij img {
-        width: 200px;
+        width: 195px;
+        height: auto;
     }
 
-    /* Projecten */
     .project img,
     .project video {
         width: 100%;
         height: auto;
     }
-
-    /* Slider */
-    .slider {
+    .slider{
         max-width: 100%;
+    }
+
+    .project p{
+        width: 100%;
     }
 
     .image-item {
         height: 300px;
     }
 
-    /* Slider knoppen */
     .prev,
     .next {
         padding: 10px;
@@ -739,23 +763,15 @@ body.dark-mode footer p:nth-child(4) {
         font-weight: bold;
     }
 
-    /* Skills */
-    #skills {
-        margin: 10px;
+    #skills, #contact {
+        padding: 1rem;
     }
 
-    /* Contact */
     .contact-box {
         width: 100%;
     }
 
-    .prev,
-    .next{
-        width: 44px;
-        height: 44px;
-    }
-
-    #darkModeToggle{
+    #darkModeToggle {
         width: 30px;
         height: 30px;
         font-size: 1rem;
@@ -764,20 +780,20 @@ body.dark-mode footer p:nth-child(4) {
     }
 }
 
-/*responsive tablet*/
-
+/* Tablet */
 @media (max-width: 1024px) {
 
     header h1 {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 5vw, 2.5rem);
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 5vw, 3rem);
     }
 
     .image-item {
-        height: 380px;
+        height: auto;
+        max-height: 380px;
     }
 
     .project img,
