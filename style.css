@@ -5,6 +5,10 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #D4CDC3;
     color: white;
@@ -13,13 +17,29 @@ body{
     padding: 0;
 }
 
-header{
-    background-color: #000000;
+header {
     position: relative;
+    overflow: hidden;
     color: white;
     padding: 3rem 1rem;
     text-align: center;
+    background: linear-gradient(
+    45deg,
+    #000000,
+    #A66E29,
+    #D9BD9C,
+    #000000
+    );
+    background-size: 600% 600%;
+    animation: gradientMove 15s infinite;
 }
+
+@keyframes gradientMove {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+}
+
 h2, h3{
     color: #000000;
 }
@@ -30,7 +50,7 @@ header h1{
 
 header p{
     margin-top: 0.5rem;
-    color: #D9BD9C;
+    color: #ADD9D9;
 }
 
 .achternaam{
@@ -279,6 +299,37 @@ section{
 
 }
 
+/*extra ervaringen*/
+#extraErvaring h2{
+    font-size: 4rem;
+    color: #A66E29;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+#extraErvaring h2::after{
+    content: "";
+    display: block;
+    width: auto;
+    height: 4px;
+    background-color: #A66E29;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+.instagram{
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: black;
+}
+
+.instagram:hover{
+    text-decoration: underline;
+}
 /* Knoppen */
 /* SLIDER KNOPPEN – betere klikbaarheid */
 .prev,
@@ -505,6 +556,14 @@ footer a{
     text-decoration: none;
 }
 
+footer a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+.footerlink{
+    color: white;
+}
 
 
 /*darkmode*/
@@ -541,9 +600,18 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background-color: #222222;
+    background: linear-gradient(
+            270deg,
+            #000000,
+            #1a1a1a,
+            #2a2a2a,
+            #000000
+    );
+    background-size: 600% 600%;
+    animation: gradientMove 20s ease infinite;
     color: #ADD9D9;
 }
+
 
 body.dark-mode header p {
     color: #D9BD9C;
@@ -586,6 +654,9 @@ body.dark-mode #overMij h3,
 body.dark-mode #projects h3,
 body.dark-mode #skills h3,
 body.dark-mode #contact h3{
+    color: white;
+}
+body.dark-mode #projects h4{
     color: white;
 }
 
@@ -673,10 +744,31 @@ body.dark-mode footer {
     color: #f0f0f0;
 }
 
+body.dark-mode footer a{
+    color: white;
+}
+
 body.dark-mode footer p:nth-child(3),
 body.dark-mode footer p:nth-child(4) {
     opacity: 0.7;
     color: #cccccc;
+}
+
+body.dark-mode .to-top{
+    background-color: #111111;
+}
+
+
+body.dark-mode #extraErvaring h3{
+    color: white;
+}
+
+body.dark-mode #extraErvaring p{
+    color: white;
+}
+
+body.dark-mode #extraErvaring a{
+    color: white;
 }
 
 
@@ -801,4 +893,30 @@ body.dark-mode footer p:nth-child(4) {
         width: 100%;
         height: auto;
     }
+}
+
+/*backtotop*/
+.to-top{
+    background-color:#A66E29;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #ADD9D9;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
