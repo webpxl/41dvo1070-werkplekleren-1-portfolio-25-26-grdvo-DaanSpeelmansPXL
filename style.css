@@ -315,7 +315,7 @@ section{
 #extraErvaring h2::after{
     content: "";
     display: block;
-    width: auto;
+width: auto;
     height: 4px;
     background-color: #A66E29;
     margin: 0.5rem auto 0;
@@ -554,6 +554,7 @@ footer p:nth-child(4){
 
 footer a{
     text-decoration: none;
+    color: white;
 }
 
 footer a:hover{
@@ -870,6 +871,7 @@ body.dark-mode #extraErvaring a{
         top: 10px;
         right: 10px;
     }
+
 }
 
 /* Tablet */
