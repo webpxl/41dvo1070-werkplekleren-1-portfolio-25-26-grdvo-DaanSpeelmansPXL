@@ -150,22 +150,6 @@ section{
     border-radius: 15px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-
-#overMij button{
-    background-color: #A66E29;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#overMij button:hover{
-    background-color: #000000;
-    transform: scale(1.05);
-}
 /*projecten*/
 
 #projects{
@@ -254,23 +238,6 @@ section{
 
 .project video:hover{
     transform: scale(1.05);
-}
-
-
-.project button{
-    background-color: #A66E29;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.project button:hover{
-    background-color: #000000;
-    transform: scale(1.1);
 }
 
 /* SLIDER */
@@ -414,38 +381,6 @@ width: auto;
 
 .skill:hover p{
     color: #A66E29;
-}
-
-#skills a button{
-    display: inline-block;
-    background-color: #A66E29;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 0.5rem;
-}
-
-#skills a button:hover{
-    background-color: #000000;
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-button{
-    background-color: #A66E29;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
 }
 
 /*contact*/
