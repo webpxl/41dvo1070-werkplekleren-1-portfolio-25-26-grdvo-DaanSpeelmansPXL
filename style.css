@@ -566,6 +566,10 @@ footer a:hover{
     color: white;
 }
 
+.privacy{
+    text-decoration: underline;
+}
+
 
 /*darkmode*/
 /* Dark Mode Toggle Knop */
